@@ -1,51 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+        <title>Finish That Severus Snape Quote </title>
+      </head>
+      <body>
+        <header>
+          <nav class="navbar navbar-light bg-light">
+            <div>View High Scores</div>
+            <div id="quiz-time">Time:</div>
+          </nav>
+        </header>
 
-<head>
-    <meta charset="UTF-8">
-    <!-- This is the first step in making the document responsive but scaling the items to screen -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Kendra Harman Homework-4 Code Quiz -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- This is the style links -->
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-
-    <!-- This is the title-->
-    <title>Complete the Quotes: Severus Snape Edition</title>
-</head>
-
-<body>
-    <!-- Link to highscores -->
-    <a href="HighScores.html">View Highscores</a>
-    <!-- This is a wrapper -->
-    <div id="wrapper">
-        <!-- Div for timer -->
-        <div id="currentTime"></div>
-        <!-- Div for quiz content -->
-        <div id="startscreen">
-            <h1>Complete the Quotes: Severs Snape Edition</h1>
-            <p>Try to answer as many Harry Potter questions as you can. Keep in mind that incorrect
-                answers
-                will penalize your score/time by ten seconds!</p>
-            <ul id="choicesUl"></ul>
-            <!-- Buttons -->
-            <button id="startTime">Start Quiz</button>
-        </div>
-        <div id= "questionsDiv">
-            <h2 id= "questiontitle"></h2>
-            <div id= "multiplechoice">
-
+        <div class="container mt-5" id="start-quiz">
+          <div class="row">
+            <div class="col-md">
+              <h1 class="text-center" id="quiz-title">Finish That Severus Snape Quote</h1>
+              <div class="text-center" id="quiz-description">
+                <p>
+                  Welcome to the quiz. Press the start button to
+                  begin. And watch the clock, you lose 15 seconds if you choose
+                  the wrong answer.
+                </p>
+              </div>
+              <div class="text-center" id="quiz-start-button">
+                <button class="btn btn-danger" id="start-button">
+                  Start Quiz
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-    
-            
-    </div>
+        <!--This section creates the page that displays the questiions and choices-->
+        <div class="container d-none" id="quiz-questions">
+          <div class="row">
+            <div class="col-md">
+              <h1 class="text-center" id="question"></h1>
+              <div class="row">
+                <div class="col-md">
+                  <div
+                    class="text-center mt-5 d-flex flex-column"
+                    id="question-choices"
+                  ></div>
+                  <div class="text-center" id="question-validity"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-none" id="all-done">
+          <div class="row">
+            <div class="col-md">
+              <h1 class="text-center" id="all-done-text">All Done!</h1>
+              <h2 class="text-center">
+                Your final score is:
+                <p id="final-score"></p>
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div>
+              <p>Enter initials:</p>
+              <input type="text" id="initial-input" />
+              <a href="high-scores.html">
+                <button class="btn btn-danger" id="initials-button">
+                  Submit
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
 
-
-    <script src="script.js"></script>
-    <script src="questions.js"></script>
-
-
-</body>
-
+        <script type="text/javascript" src="script/script.js"></script>
+        <script type="text/javascript" src="script/questions.js"></script>
+      </body>
+    </html>
+  </body>
 </html>
